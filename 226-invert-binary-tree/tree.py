@@ -7,9 +7,13 @@
 class Solution(object):
     # this is a recursive implementation.
 
-    # Space: O(log n) since this is spawning stack frames. The number of stack
-    # frames depends on how many times a recursive function is called. In this
-    # case, the depth of a binary tree. The height of a binary tree is log(n).
+    # Space: O(log n) where n is the number of nodes. We're spawning stack frames. 
+    # The number of stack frames depends on how many times a recursive function 
+    # is called. In this case, the depth of a binary tree. The height of a binary 
+    # tree is log(n).
+    
+    # Time: O(n) where n is the number nodes. We need to touch each node to reverse
+    # its children.
     def invertTree(self, root):
         # We need a base case to end the cascade of recursive calls
         if root is None:
